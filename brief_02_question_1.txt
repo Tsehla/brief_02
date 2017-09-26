@@ -1,0 +1,65 @@
+Question 1
+
+What is the output of the following code ?
+
+a)
+
+           var x = myFunction(4, 3);
+
+function myFunction(a, b) {
+return a * b;
+        }
+
+
+// -------Answer-------
+
+
+a will =4;
+b will =3
+
+return will =4x3;
+
+
+funtion will retun (12);
+
+\\ ----------------------
+
+
+b)
+
+var a = [0, 'b', 'c'];
+
+console.log(typeof a);
+
+// -------Answer-------
+
+a is = [0, 'b', 'c'] which is an array, js treats array as object,
+
+
+answer= object
+
+\\ ----------------------
+
+c)
+
+var recruit = {
+name: 'Vuyo',
+age :22,
+getName: function() { return this.name +' '+ this.age; }
+
+}
+
+console.log(recruit.getName());
+
+// -------Answer-------
+
+function will return { return Vuyo +' '+ 22; };
+
+console.log() will print answer: Vuyo 22;
+
+
+
+
+
+
+
