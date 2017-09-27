@@ -1,38 +1,41 @@
 <html><head><title></title>
-    
-    
+
+
     <script>
-        
+
         var a;
         var b;
     function check(x,y){
-        
+
        var q="You HAVE WON!!!";
        var w="You HAVE LOST, please try again";
        if(x==y){
         document.getElementById("para4").innerHtml=q;
-        return alert("Not bad, or is it beginners LUCK");
-            
-             
+        return alert("Congratulation, you have WON!");
+
+
         }
        else{
             document.getElementById("para4").innerHTML=w;
-            return alert("You're LOOSER!");
-       }               
-        
+            var t= confirm("You have LOST!, the answer is: ( " +a+" ).Would you like to try again?");
+           if(t==true){
+               location.reload();
+           }
+       }
+
     }
-    
-    
+
+
     </script>
-    
-    
-    
-    
+
+
+
+
     </head><body>
 
-    
+
     <h1>Question 2</h1>
-        
+
 
         <p>Write Javascript code that does the following :</p>
 
@@ -43,13 +46,13 @@
 &lt;script&gt;
     <br /><br />
 var a = Math.random()*5+1;
-    
+
     <br /><br />
 
 document.getElementbyId(para).innerHtml=a;
 
     <br /><br />
-    
+
      &lt;/script&gt;
 <br />
 &lt;div id="para"\&gt;&lt/div&gt;
@@ -57,20 +60,20 @@ document.getElementbyId(para).innerHtml=a;
 
 
 </code>
-    
+
     <p>//----------answer--------</p>
-    
-  <div id="para"></div>  
-    
+
+  <div id="para"></div>
+
     <script>
-    
-    var a=Math.random()*5+1;
-        
-        
+
+    var a=Math.floor(Math.random()*6+1);
+
+
     document.getElementById('para').innerHTML=a;
-    
-    </script>    
-    
+
+    </script>
+
     <p>-------------------------------</p>
 
 
@@ -80,46 +83,46 @@ document.getElementbyId(para).innerHtml=a;
 <p><b>B)</b> The program should prompt the user to enter a number from in the range of 1 to 6.</p>
 
     <code>
-    
+
     &lt;script&gt;
         <br/><br/>
         var a=promt('please type any number between 1 and 6');
         <br/><br/>
-        
+
     document.getElementbyId('para2').innerHtml=a;
         <br /><br/>
-        
+
         &lt;/script&gt;
-        
+
         <br/><br/>
-        
+
         &lt;div id="para2"&gt;&lt;/div&gt;
         <br/><br/>
-        
-        
-        
+
+
+
     </code>
-    
+
     <p>//-----------answer---------</p>
         <div id="para2"></div>
-    
+
     <p>------------------------</p>
     <script>
-        
-       
-        
+
+
+
         var b=prompt('please type any number between 1 and 6');
-        document.getElementById("para2").innerHTML=b;      
-    
+        document.getElementById("para2").innerHTML=b;
+
         </script>
-    
-   
+
+
     <p><b>C)</b> If the number entered by the user does not match the number generated in point A
 display a message inside the browser to encourage the user try one more time.
 Otherwise congratulate the user.</p>
-    
+
     <code>
-    
+
     &lt;html&gt;<br /><br />
         &lt;head&gt;<br /><br />
         &lt;script&gt;<br /><br />
@@ -127,38 +130,38 @@ Otherwise congratulate the user.</p>
         var b;<br /><br />
         function check(x,y){<br />
         if (x==y){<br />
-        
+
         return alert("YOU WIN!");<br />
-        
+
         }<br /><br />
-        
+
         else{<br />
-        
+
         return alert("TRY AGAIN");<br />
-        
-        } <br />   
-          
-        }    
+
+        } <br />
+
+        }
         <br />
-        &lt;/script&gt;<br /><br />        
+        &lt;/script&gt;<br /><br />
         &lt;/head&gt;<br /><br />
         &lt;body&gt;<br /><br />
         &lt;script&gt;<br /><br />
-        
+
         funtion check(a,b);<br /><br />
-       
-        &lt;/script&gt;  <br /><br />  
+
+        &lt;/script&gt;  <br /><br />
         &lt;/body&gt;<br /><br />
         &lt;/html&gt;<br /><br />
      </code>
     <p>//------------answer------------</p>
     <div id="para4"></div>
-    
+
     <script>
     check(a,b);
-            
+
     </script>
-        
+
     <p>-------------------------------</p>
 
 <p>PS: Below is an example on how to prompt the user for input </p>
@@ -168,5 +171,5 @@ Otherwise congratulate the user.</p>
 <p>console.log(name);</p>
 
 
-    
+
     </body></html>
