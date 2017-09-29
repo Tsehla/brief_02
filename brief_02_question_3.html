@@ -1,0 +1,161 @@
+<html>
+<head>
+    <script>
+            
+        window.open('','_parent','');
+       
+    
+    function startProgram(){
+        var startPrompt=prompt("Please enter youname to start program","User");
+       // check input is filled
+        if(startPrompt!=null){
+        //send confirm    
+            var startPromptConfirm=confirm("The program has started, Click continue to proceed:" );
+        //check confirm is true
+            if(startPromptConfirm==true){
+                alert("Welcome "+startPrompt+ " I have been expecting you, click okay to proceed");
+            }
+        //check confirm is false    
+            else if (startPromptConfirm!=true){
+                alert("The program is exiting, Good bye!");
+              window.close();
+                                        } }
+    
+        //check input is not filled
+        //connot catch null, nor able to implement this using switch
+        //only cancel button is catched, 
+        else if(startPrompt==null){
+            
+            //send notice    
+           var startPromptConfirm=confirm("You have not filled your name, Please fill in your name to start the program!");
+        //check confirm is true
+            if(startPromptConfirm==true){
+               location.reload;
+            }
+        //check confirm is false    
+            else if (startPromptConfirm!=true){
+                alert("The program is exiting, Good bye!");
+                window.close();
+            
+            }
+        }
+        
+            
+            
+        }
+  
+    
+  var clientPersonaldetails=[];
+        
+        //cllient name
+    function clientNameRequestingFunction(){
+            
+        var clientName="Name:";
+            
+        var clientNamePrompt=prompt("Please enter your name","What is your name?");
+            
+        var clientNameAndclientNamePrompt=clientName + clientNamePrompt;
+            
+        clientPersonaldetails.push(clientNameAndclientNamePrompt);
+        
+          
+    }
+        //client contact number
+        function clientContactNumberRequestingFunction(){
+            
+        var clientName="Contact number:";
+            
+        var clientNamePrompt=prompt("Please enter your Contact number","What is your Contact number?");
+            
+        var clientNameAndclientNamePrompt=clientName + clientNamePrompt;
+            
+        clientPersonaldetails.push(clientNameAndclientNamePrompt);
+        
+      
+    }
+        //client address
+        function clientAdressRequestingFunction(){
+            
+        var clientName="Address:";
+            
+        var clientNamePrompt=prompt("Please enter your Home address","What is your Home address?");
+            
+        var clientNameAndclientNamePrompt=clientName + clientNamePrompt;
+            
+        clientPersonaldetails.push(clientNameAndclientNamePrompt);
+        
+  
+    }
+        
+        //client number of dependants
+    
+        
+        function clientNumberOfDependantsRequestingFunction(){
+            
+        var clientName="Number of dependants:";
+            
+        var clientNamePrompt=prompt("Please enter total number of dependants you have","How many dependants do you have?");
+            
+        clientNameAndclientNamePrompt=clientName + clientNamePrompt;
+            
+        clientPersonaldetails.push(clientNameAndclientNamePrompt);
+           
+    }
+    
+          
+        // array filling function
+     function clientDataArrayfillingFunction(){
+                
+            clientNameRequestingFunction();
+            clientContactNumberRequestingFunction();
+            clientAdressRequestingFunction();
+            clientNumberOfDependantsRequestingFunction();
+            dataEntryConfimation();
+            
+                
+            }
+    //data showing with continue or add more
+     function dataViewingAndAddingFunction(){
+         
+         var dataViewAddOrContinueConfirm=confirm(clientPersonaldetails+"   To add more data press okay, or cancel to continue..");
+         if(dataViewAddOrContinueConfirm===true){
+             clientDataArrayfillingFunction();
+         }
+     }
+       
+    //client data entry confirmation
+      function dataEntryConfimation(){
+          
+          var dataEntrySucessConfimation=confirm("Please note information has been succesfully captured. To view the data Press Okay, or Cancel to continue..");
+          if  (dataEntrySucessConfimation===true){
+              dataViewingAndAddingFunction();
+              
+          }
+      }
+        
+     
+    
+    
+    
+    
+    </script>
+    </head>
+    <body onload="">
+        
+    
+    <script>
+            startProgram();
+            clientDataArrayfillingFunction();
+            
+            
+          
+        </script>
+    
+    
+    
+    
+    
+    
+    </body>
+
+</html>
